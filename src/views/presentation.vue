@@ -1,6 +1,5 @@
 <template>
 
-    <MainLayout>
 
         <!-- Content
 		============================================= -->
@@ -196,7 +195,6 @@
 
             </div>
         </section><!-- #content end -->
-    </MainLayout>
 </template>
 
 

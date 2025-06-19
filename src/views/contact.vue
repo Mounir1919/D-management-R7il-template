@@ -1,5 +1,4 @@
 <template>
-    <MainLayout>
 
         <div style="pointer-events: none;">
             <iframe src="https://maps.google.com/maps?q=paris&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
@@ -121,7 +120,6 @@
 
             </div>
         </section>
-    </MainLayout>
 </template>
 
 <script>

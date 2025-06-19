@@ -1,5 +1,4 @@
 <template>
-    <MainLayout>
 
 
     <section id="slider" class="slider-element bg-color"
@@ -838,7 +837,6 @@
         </div>
     </section><!-- #content end -->
   <div id="gotoTop" class="uil uil-angle-up"></div>
-  </MainLayout>
 
 </template>
 

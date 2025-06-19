@@ -7,10 +7,10 @@
           <a href="/">
             <!-- <img class="logo-default" srcset="/images/logo.png, /images/logo@2x.png 2x" src="/images/logo@2x.png" alt="Logo R7il">
             <img class="logo-dark" srcset="/images/logo-dark.png, /images/logo-dark@2x.png 2x" src="/images/logo-dark@2x.png" alt="Logo R7il"> -->
-         
-<img class="logo-default" :style="{ color: 'white' }" alt="Logo R7il">
-            <img class="logo-dark" :style="{ color: 'white' }"Z alt="Logo R7il">
-        </a>
+
+            <img class="logo-default" :style="{ color: 'white' }" alt="Logo R7il">
+            <img class="logo-dark" :style="{ color: 'white' }" Z alt="Logo R7il">
+          </a>
         </div>
 
         <!-- Informations de contact -->
@@ -45,7 +45,8 @@
 
             <!-- Bouton d’action -->
             <div class="header-buttons d-none d-sm-inline-block">
-              <router-link to="/login_register" data-scrollto="#slider" data-offset="-80" class="button button-rounded button-white button-light button-small m-0">
+              <router-link to="/login_register" data-scrollto="#slider" data-offset="-80"
+                class="button button-rounded button-white button-light button-small m-0">
                 Se Connecter
               </router-link>
             </div>
@@ -61,27 +62,53 @@
           <!-- Menu principal -->
           <nav class="primary-menu with-arrows">
             <ul class="menu-container">
-              <li class="menu-item current"><router-link class="menu-link" to="/"><div>Accueil</div></router-link></li>
-<li class="menu-item">
-  <router-link class="menu-link" to="/presentation">
-    <div>Notre entreprise</div>
-  </router-link>
-</li>
-              <li class="menu-item">
-                <a class="menu-link" to="/tarifs"><div>Tarifs</div></a>
+              <li class="menu-item" :class="{ current: $route.path === '/' }">
+                <router-link class="menu-link" to="/">
+                  <div>Accueil</div>
+                </router-link>
+              </li>
+              <li class="menu-item" :class="{ current: $route.path === '/presentation' }">
+                <router-link class="menu-link" to="/presentation">
+                  <div>Notre entreprise</div>
+                </router-link>
+              </li>
+
+              <li class="menu-item"><router-link class="menu-link" to="#">
+                  <div>Tarifs</div>
+                </router-link>
                 <ul class="sub-menu-container" data-class="up-lg:not-dark">
-                  <li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-house"></i>Déménagement résidentiel</div></a></li>
-                  <li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-building"></i>Déménagement de bureau</div></a></li>
-                  <li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-globe"></i>Déménagement international</div></a></li>
-                  <li class="menu-item"><a class="menu-link" href="#"><div><i class="fa-solid fa-paw"></i>Transport d’animaux</div></a></li>
-                  <li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-car-front"></i>Transport de voiture</div></a></li>
-                  <li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-truck"></i>Louer un camion</div></a></li>
+                  <li class="menu-item"><a class="menu-link" href="#">
+                      <div><i class="bi-house"></i>Déménagement résidentiel</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="#">
+                      <div><i class="bi-building"></i>Déménagement de bureau</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="#">
+                      <div><i class="bi-globe"></i>Déménagement international</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="#">
+                      <div><i class="fa-solid fa-paw"></i>Transport d’animaux</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="#">
+                      <div><i class="bi-car-front"></i>Transport de voiture</div>
+                    </a></li>
+                  <li class="menu-item"><a class="menu-link" href="#">
+                      <div><i class="bi-truck"></i>Louer un camion</div>
+                    </a></li>
                 </ul>
               </li>
-              <li class="menu-item"><router-link class="menu-link" to="/transporteur"><div>Transporteur</div></router-link></li>
-              <li class="menu-item"><router-link class="menu-link" to="/faq"><div>FAQ</div></router-link></li>
-              <li class="menu-item"><router-link class="menu-link" to="/blog"><div>Blog</div></router-link></li>
-              <li class="menu-item"><router-link class="menu-link" to="/contact"><div>Contact</div></router-link></li>
+              <li class="menu-item" :class="{ current: $route.path.startsWith('/transporteur') }">
+                <router-link class="menu-link" to="/transporteur">
+                  <div>Transporteurs</div>
+                </router-link>
+              </li>
+
+             
+                <li class="menu-item" :class="{ current: $route.path.startsWith('/contact') }">
+                <router-link class="menu-link" to="/contact">
+                  <div>Contact</div>
+                </router-link>
+              </li>
             </ul>
           </nav>
 
